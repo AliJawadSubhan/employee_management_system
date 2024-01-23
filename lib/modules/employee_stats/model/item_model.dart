@@ -1,3 +1,4 @@
+import 'package:employee_management_system/configs/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class ItemModel {
@@ -10,8 +11,9 @@ class ItemModel {
 }
 
 List<ItemModel> items = [
-  ItemModel(Colors.green[200], Colors.purple, '48', 'Present'),
-  ItemModel(Colors.red[200], Colors.purple, '12', 'Late'),
+  ItemModel(
+      const Color(0xFF7158CD), ColorConstants.primaryColor, '48', 'Present'),
+  ItemModel(const Color(0xFFFEF0E4), const Color(0xFFFF9445), '12', 'Late'),
   ItemModel(Colors.red[200], Colors.red, '18', 'Absent'),
   ItemModel(Colors.green[200], Colors.purple, '7', 'Half day'),
   ItemModel(Colors.grey[200], Colors.purple, '13', 'One day leaves'),
