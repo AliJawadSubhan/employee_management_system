@@ -1,3 +1,4 @@
+import 'package:employee_management_system/core/core_widgets/core_text.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeManagementSystem extends StatelessWidget {
@@ -12,7 +13,14 @@ class EmployeeManagementSystem extends StatelessWidget {
         useMaterial3: true,
         indicatorColor: Colors.white,
       ),
-      // home: const SplashPage(),
+      home: Scaffold(
+        body: Center(
+          child: customTextWidget(
+            text:
+                "Hello world, Wow we are the best flutter developers! They shall know",
+          ),
+        ),
+      ),
     );
   }
 }

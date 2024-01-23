@@ -14,7 +14,7 @@ Widget customTextWidget({
   TextAlign textAlign = TextAlign.start,
   double? letterSpacing,
   int? maxLines,
-  fixText = false,
+  bool fixText = false,
   isPlusJakartaFont = false,
   TextDecoration? jakartaDecoration,
 }) {
