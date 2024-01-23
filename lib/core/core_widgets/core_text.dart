@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget customTextWidget({
   required text,
-  double fontSize = 14.0,
+  double fontSize = 16.0,
   Color color = Colors.black,
   String fontNameP = FontsConstants.poppins,
   FontWeight fontWeight = FontWeight.w600,

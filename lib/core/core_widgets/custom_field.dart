@@ -13,7 +13,7 @@ Widget customTextField({
   double suffixfontSize = 14,
   Color suffixColor = Colors.white,
   FontWeight fontWeight = FontWeight.normal,
-  double height = 57,
+  double height = 52,
   String? hintText = "",
   double circularRadius = 10,
   bool isPassword = false,
@@ -48,15 +48,16 @@ Widget customTextField({
       onTap: ontpap ?? () {},
       controller: controller,
       keyboardType: keyBoard,
-
+      textAlignVertical: TextAlignVertical.top,
+      // textAlignVertical: TextAlignVertical.center,
       style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
-
       decoration: InputDecoration(
         // counter: const SizedBox.shrink(),
         filled: true,
         fillColor: fillColor ?? Colors.white,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
+
         suffixText: suffixText,
         contentPadding: (prefixIcon != null || suffixIcon != null)
             ? const EdgeInsets.only(top: 15)
@@ -72,7 +73,7 @@ Widget customTextField({
             fontFamily: GoogleFonts.poppins().fontFamily,
             color: const Color(0xFFABB3BB)),
         hintText: hintText,
-
+        alignLabelWithHint: true,
         border: InputBorder.none,
       ),
     ),

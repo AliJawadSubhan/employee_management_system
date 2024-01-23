@@ -1,4 +1,4 @@
-import 'package:employee_management_system/core/core_widgets/core_text.dart';
+import 'package:employee_management_system/modules/authentication/login_user/login_user.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeManagementSystem extends StatelessWidget {
@@ -8,19 +8,14 @@ class EmployeeManagementSystem extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        bottomSheetTheme:
-            const BottomSheetThemeData(backgroundColor: Colors.white),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: Colors.white,
+        ),
+        scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
         indicatorColor: Colors.white,
       ),
-      home: Scaffold(
-        body: Center(
-          child: customTextWidget(
-            text:
-                "Hello world, Wow we are the best flutter developers! They shall know",
-          ),
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
