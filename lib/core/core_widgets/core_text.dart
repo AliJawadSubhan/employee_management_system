@@ -7,7 +7,7 @@ Widget customTextWidget({
   required text,
   double fontSize = 16.0,
   Color color = Colors.black,
-  String fontNameP = FontsConstants.poppins,
+  String fontNameP = FontsConstants.questerial,
   FontWeight fontWeight = FontWeight.w600,
   TextOverflow overflow = TextOverflow.visible,
   double lineHeight = 1.2,
@@ -32,7 +32,6 @@ Widget customTextWidget({
                 overflow: overflow,
               )))
       : Text(text.toString(),
-          // softWrap: softwrap,
           textAlign: textAlign,
           style: GoogleFonts.getFont(fontNameP,
               color: color,

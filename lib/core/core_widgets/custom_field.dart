@@ -13,7 +13,7 @@ Widget customTextField({
   double suffixfontSize = 14,
   Color suffixColor = Colors.white,
   FontWeight fontWeight = FontWeight.normal,
-  double height = 52,
+  double height = 50,
   String? hintText = "",
   double circularRadius = 10,
   bool isPassword = false,
