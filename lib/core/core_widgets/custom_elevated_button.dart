@@ -20,7 +20,7 @@ Widget customElevatedBtnWidget(
     child: ElevatedButton(
       onPressed: func,
       style: ElevatedButton.styleFrom(
-          // surfaceTintColor: ColorConstants.primaryColor,
+          surfaceTintColor: ColorConstants.blackColor,
           // splashFactory: ,
           backgroundColor: bgColor,
           elevation: 0,

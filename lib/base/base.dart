@@ -8,8 +8,10 @@ class EmployeeManagementSystem extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        bottomSheetTheme:
-            const BottomSheetThemeData(backgroundColor: Colors.white),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: Colors.white,
+        ),
+        scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
         indicatorColor: Colors.white,
       ),
