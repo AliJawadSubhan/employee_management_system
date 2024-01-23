@@ -1,6 +1,9 @@
+import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:employee_management_system/configs/constants/color_constants.dart';
-import 'package:employee_management_system/core/core_widgets/core_text.dart';
+import 'package:employee_management_system/configs/extensions/buildcontext_extensions.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
+import 'package:employee_management_system/modules/holidaylist/widget/all_holidays.dart';
+import 'package:employee_management_system/modules/holidaylist/widget/upcoming_list.dart';
 import 'package:flutter/material.dart';
 
 class HolidayPage extends StatelessWidget {
@@ -13,34 +16,55 @@ class HolidayPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Spaces.mid,
-                customTextWidget(
-                    text: 'Upcoming Holiday List',
-                    color: ColorConstants.blackColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18),
-                Spaces.mid,
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      color: const Color(0xFFF7F7F7),
-                      child: ExpansionTile(
-                        title: Text("User $index"),
-                        children: [
-                          Text("Name : User $index"),
+            child: SizedBox(
+              height: context.screenHeight,
+              child: DefaultTabController(
+                length: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Spaces.mid,
+                    ButtonsTabBar(
+                      physics: const NeverScrollableScrollPhysics(),
+                      unselectedDecoration: BoxDecoration(
+                        color: ColorConstants.whiteColor,
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      height: 55,
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: context.screenWidth * 0.06,
+                      ),
+                      backgroundColor: ColorConstants.primaryColor,
+                      unselectedLabelStyle: const TextStyle(
+                        color: ColorConstants.primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      labelStyle: const TextStyle(
+                        color: ColorConstants.whiteColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      tabs: const [
+                        Tab(
+                          text: "Upcoming Holidays",
+                        ),
+                        Tab(
+                          text: "All Holidays",
+                        ),
+                      ],
+                    ),
+                    Spaces.mid,
+                    const Expanded(
+                      child: TabBarView(
+                        children: <Widget>[
+                          UpcomingList(),
+                          AllHolidays(),
                         ],
                       ),
-                    );
-                  },
-                )
-              ],
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
         ),
