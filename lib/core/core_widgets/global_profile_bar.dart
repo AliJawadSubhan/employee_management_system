@@ -1,4 +1,5 @@
 import 'package:employee_management_system/configs/constants/color_constants.dart';
+import 'package:employee_management_system/configs/extensions/buildcontext_extensions.dart';
 import 'package:employee_management_system/core/core_widgets/core_text.dart';
 import 'package:flutter/material.dart';
 
@@ -35,13 +36,18 @@ class GlobalProfileAppbar extends StatelessWidget {
             fontSize: 17,
             fontWeight: FontWeight.w500),
       ),
-      trailing: Padding(
-        padding: const EdgeInsets.only(bottom: 23.0),
-        child: customTextWidget(
-            text: 'Back',
-            color: ColorConstants.blackColor,
-            fontSize: 17,
-            fontWeight: FontWeight.w500),
+      trailing: GestureDetector(
+        onTap: () {
+          context.popFromScreen();
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 23.0),
+          child: customTextWidget(
+              text: 'Back',
+              color: ColorConstants.blackColor,
+              fontSize: 17,
+              fontWeight: FontWeight.w500),
+        ),
       ),
     );
   }

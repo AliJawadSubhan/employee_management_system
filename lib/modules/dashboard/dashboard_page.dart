@@ -4,6 +4,8 @@ import 'package:employee_management_system/core/core_widgets/core_text.dart';
 import 'package:employee_management_system/core/core_widgets/custom_elevated_button.dart';
 import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
+import 'package:employee_management_system/modules/employee_stats/employee_stats.dart';
+import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
 
 import '../employee_stats/model/item_model.dart';
@@ -90,18 +92,23 @@ class DashboardPage extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Container(
-                        height: context.screenHeight * 0.1,
-                        width: 72,
-                        decoration: const BoxDecoration(
-                          color: ColorConstants.primaryColor,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            "assets/icons/calendar.png",
-                            width: 32,
-                            color: Colors.white,
+                      GestureDetector(
+                        onTap: () {
+                          context.pushScreenTo(const EmployeeStatsPage());
+                        },
+                        child: Container(
+                          height: context.screenHeight * 0.1,
+                          width: 72,
+                          decoration: const BoxDecoration(
+                            color: ColorConstants.primaryColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              "assets/icons/calendar.png",
+                              width: 32,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -140,18 +147,23 @@ class DashboardPage extends StatelessWidget {
                   Spaces.midw,
                   Column(
                     children: [
-                      Container(
-                        height: context.screenHeight * 0.1,
-                        width: 72,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF5A82F3),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            "assets/icons/party.png",
-                            width: 32,
-                            color: Colors.white,
+                      GestureDetector(
+                        onTap: () {
+                          context.pushScreenTo(const HolidayPage());
+                        },
+                        child: Container(
+                          height: context.screenHeight * 0.1,
+                          width: 72,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF5A82F3),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              "assets/icons/party.png",
+                              width: 32,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -333,7 +345,7 @@ class DashboardPage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
                 child: customTextWidget(
-                  text: "Total Attendance",
+                  text: "Month Attendance",
                   fontSize: 21,
                 ),
               ),

@@ -1,5 +1,5 @@
+import 'package:employee_management_system/modules/authentication/login_user/login_user.dart';
 import 'package:employee_management_system/modules/dashboard/dashboard_page.dart';
-import 'package:employee_management_system/modules/employee_stats/employee_stats.dart';
 import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class EmployeeManagementSystem extends StatelessWidget {
         useMaterial3: true,
         indicatorColor: Colors.white,
       ),
-      home: DashboardPage(),
+      home: LoginPage(),
     );
   }
 }

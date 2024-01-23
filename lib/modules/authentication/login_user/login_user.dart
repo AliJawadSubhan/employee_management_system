@@ -7,6 +7,8 @@ import 'package:employee_management_system/core/core_widgets/custom_elevated_but
 import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
 import 'package:employee_management_system/core/services/fingerprint_helper.dart';
+import 'package:employee_management_system/modules/dashboard/dashboard_page.dart';
+import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -89,7 +91,7 @@ class LoginPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     func: () {
-                      // console.log("")
+                      context.pushReplacementScreenTo(DashboardPage());
                       log("HEllo world");
                     },
                   ),

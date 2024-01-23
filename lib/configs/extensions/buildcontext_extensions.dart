@@ -8,6 +8,6 @@ extension BuildContextExtension on BuildContext {
       Navigator.push(this, MaterialPageRoute(builder: (c) => page));
   void popFromScreen() => Navigator.pop(this);
   // ignore: non_constant_identifier_names
-  void PushReplacementScreenTo(Widget page) =>
+  void pushReplacementScreenTo(Widget page) =>
       Navigator.pushReplacement(this, MaterialPageRoute(builder: (c) => page));
 }
