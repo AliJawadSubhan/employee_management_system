@@ -1,4 +1,4 @@
-import 'package:employee_management_system/modules/employee_stats/employee_stats.dart';
+import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeManagementSystem extends StatelessWidget {
@@ -13,7 +13,7 @@ class EmployeeManagementSystem extends StatelessWidget {
         useMaterial3: true,
         indicatorColor: Colors.white,
       ),
-      home: const EmployeeStatsPage(),
+      home: const HolidayPage(),
     );
   }
 }
