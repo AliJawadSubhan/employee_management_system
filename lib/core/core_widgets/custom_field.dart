@@ -19,6 +19,7 @@ Widget customTextField({
   bool isPassword = false,
   TextInputType keyBoard = TextInputType.text,
   Widget? prefixIcon,
+  paddingWithoutContent = 0,
   Widget? suffixIcon,
   int maxLines = 1,
   Color? color,
@@ -33,10 +34,11 @@ Widget customTextField({
           color: colorBorder,
         )),
     padding: const EdgeInsets.only(
-      left: 15,
+      left: 12,
     ),
     child: TextField(
       // maxLength: maxLengthText,
+      maxLines: maxLines,
       onChanged: onChanged,
       onTapOutside: (e) {
         FocusNode().unfocus();
@@ -48,6 +50,7 @@ Widget customTextField({
       onTap: ontpap ?? () {},
       controller: controller,
       keyboardType: keyBoard,
+
       textAlignVertical: TextAlignVertical.top,
       // textAlignVertical: TextAlignVertical.center,
       style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
@@ -55,13 +58,15 @@ Widget customTextField({
         // counter: const SizedBox.shrink(),
         filled: true,
         fillColor: fillColor ?? Colors.white,
-        prefixIcon: prefixIcon,
+        prefixIcon: Padding(
+          padding: EdgeInsets.only(bottom: (maxLines == 1 ? 0 : 60.0)),
+          child: prefixIcon,
+        ),
         suffixIcon: suffixIcon,
-
         suffixText: suffixText,
         contentPadding: (prefixIcon != null || suffixIcon != null)
             ? const EdgeInsets.only(top: 15)
-            : EdgeInsets.zero,
+            : EdgeInsets.only(top: paddingWithoutContent),
         suffixStyle: TextStyle(
           fontSize: suffixfontSize,
           fontWeight: fontWeight,

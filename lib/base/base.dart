@@ -11,6 +11,7 @@ class EmployeeManagementSystem extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AttendenceProvider()),
+        ChangeNotifierProvider(create: (context) => LeavesProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

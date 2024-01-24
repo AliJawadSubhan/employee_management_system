@@ -24,15 +24,15 @@ class GlobalProfileAppbar extends StatelessWidget {
         ),
       ),
       title: customTextWidget(
-          text: 'Oliver Hendry',
+          text: 'Ali Jawad',
           color: ColorConstants.primaryColor,
           fontSize: 19,
           fontWeight: FontWeight.w500),
       subtitle: Padding(
         padding: const EdgeInsets.only(top: 3.0),
         child: customTextWidget(
-            text: 'UI/UX Designer',
-            color: Colors.grey.shade300,
+            text: 'Lead Flutter developer :3',
+            color: Colors.grey.shade500,
             fontSize: 17,
             fontWeight: FontWeight.w500),
       ),
