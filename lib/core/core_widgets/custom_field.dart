@@ -13,13 +13,12 @@ Widget customTextField({
   double suffixfontSize = 14,
   Color suffixColor = Colors.white,
   FontWeight fontWeight = FontWeight.normal,
-  double height = 50,
+  double height = 57,
   String? hintText = "",
   double circularRadius = 10,
   bool isPassword = false,
   TextInputType keyBoard = TextInputType.text,
   Widget? prefixIcon,
-  paddingWithoutContent = 0,
   Widget? suffixIcon,
   int maxLines = 1,
   Color? color,
@@ -34,11 +33,10 @@ Widget customTextField({
           color: colorBorder,
         )),
     padding: const EdgeInsets.only(
-      left: 12,
+      left: 15,
     ),
     child: TextField(
       // maxLength: maxLengthText,
-      maxLines: maxLines,
       onChanged: onChanged,
       onTapOutside: (e) {
         FocusNode().unfocus();
@@ -51,22 +49,18 @@ Widget customTextField({
       controller: controller,
       keyboardType: keyBoard,
 
-      textAlignVertical: TextAlignVertical.top,
-      // textAlignVertical: TextAlignVertical.center,
       style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
+
       decoration: InputDecoration(
         // counter: const SizedBox.shrink(),
         filled: true,
         fillColor: fillColor ?? Colors.white,
-        prefixIcon: Padding(
-          padding: EdgeInsets.only(bottom: (maxLines == 1 ? 0 : 60.0)),
-          child: prefixIcon,
-        ),
+        prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         suffixText: suffixText,
         contentPadding: (prefixIcon != null || suffixIcon != null)
             ? const EdgeInsets.only(top: 15)
-            : EdgeInsets.only(top: paddingWithoutContent),
+            : EdgeInsets.zero,
         suffixStyle: TextStyle(
           fontSize: suffixfontSize,
           fontWeight: fontWeight,
@@ -78,7 +72,7 @@ Widget customTextField({
             fontFamily: GoogleFonts.poppins().fontFamily,
             color: const Color(0xFFABB3BB)),
         hintText: hintText,
-        alignLabelWithHint: true,
+
         border: InputBorder.none,
       ),
     ),
