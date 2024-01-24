@@ -6,6 +6,7 @@ import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
 import 'package:employee_management_system/modules/employee_stats/employee_stats.dart';
 import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
+import 'package:employee_management_system/modules/leaves/leaves_page.dart';
 import 'package:flutter/material.dart';
 
 import '../employee_stats/model/item_model.dart';
@@ -126,29 +127,34 @@ class DashboardPage extends StatelessWidget {
                     ],
                   ),
                   Spaces.midw,
-                  Column(
-                    children: [
-                      Container(
-                        height: context.screenHeight * 0.1,
-                        width: 72,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFFFC398),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            "assets/icons/logout.png",
-                            width: 32,
-                            color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      context.pushScreenTo(const LeavesPage());
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          height: context.screenHeight * 0.1,
+                          width: 72,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFFFC398),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              "assets/icons/logout.png",
+                              width: 32,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                      ),
-                      Spaces.smallh,
-                      customTextWidget(
-                        text: "Leaves",
-                        fontSize: 14,
-                      ),
-                    ],
+                        Spaces.smallh,
+                        customTextWidget(
+                          text: "Leaves",
+                          fontSize: 14,
+                        ),
+                      ],
+                    ),
                   ),
                   Spaces.midw,
                   Column(

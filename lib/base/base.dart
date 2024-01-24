@@ -1,5 +1,9 @@
 import 'package:employee_management_system/modules/attendence/attendence_page.dart';
 import 'package:employee_management_system/modules/attendence/attendence_provider.dart';
+import 'package:employee_management_system/modules/authentication/login_user/login_user.dart';
+import 'package:employee_management_system/modules/dashboard/dashboard_page.dart';
+import 'package:employee_management_system/modules/leaves/leaves_page.dart';
+import 'package:employee_management_system/modules/leaves/leaves_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +14,7 @@ class EmployeeManagementSystem extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AttendenceProvider()),
+        ChangeNotifierProvider(create: (context) => LeavesProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -22,7 +27,7 @@ class EmployeeManagementSystem extends StatelessWidget {
           useMaterial3: true,
           indicatorColor: Colors.white,
         ),
-        home: AttendancePage(),
+        home: DashboardPage(),
       ),
     );
   }
