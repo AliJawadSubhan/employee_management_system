@@ -24,6 +24,20 @@ class HolidayPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Spaces.mid,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: GestureDetector(
+                      onTap: () {
+                        context.popFromScreen();
+                      },
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        size: 20,
+                        color: ColorConstants.blackColor,
+                      ),
+                    ),
+                  ),
+                  Spaces.smallh,
                   ButtonsTabBar(
                     physics: const NeverScrollableScrollPhysics(),
                     unselectedDecoration: BoxDecoration(
