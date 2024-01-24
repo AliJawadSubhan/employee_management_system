@@ -1,6 +1,7 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:employee_management_system/configs/constants/color_constants.dart';
 import 'package:employee_management_system/configs/extensions/buildcontext_extensions.dart';
+import 'package:employee_management_system/core/core_widgets/global_profile_bar.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
 import 'package:employee_management_system/modules/holidaylist/widget/all_holidays.dart';
 import 'package:employee_management_system/modules/holidaylist/widget/upcoming_list.dart';
@@ -24,20 +25,8 @@ class HolidayPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Spaces.mid,
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: GestureDetector(
-                      onTap: () {
-                        context.popFromScreen();
-                      },
-                      child: const Icon(
-                        Icons.arrow_back_ios,
-                        size: 20,
-                        color: ColorConstants.blackColor,
-                      ),
-                    ),
-                  ),
-                  Spaces.smallh,
+                  const GlobalProfileAppbar(),
+                  Spaces.mid,
                   ButtonsTabBar(
                     physics: const NeverScrollableScrollPhysics(),
                     unselectedDecoration: BoxDecoration(

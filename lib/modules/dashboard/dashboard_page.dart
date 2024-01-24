@@ -4,6 +4,7 @@ import 'package:employee_management_system/core/core_widgets/core_text.dart';
 import 'package:employee_management_system/core/core_widgets/custom_elevated_button.dart';
 import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
+import 'package:employee_management_system/modules/attendence/attendence_page.dart';
 import 'package:employee_management_system/modules/employee_stats/employee_stats.dart';
 import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +101,7 @@ class DashboardPage extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          context.pushScreenTo(const EmployeeStatsPage());
+                          context.pushScreenTo(const AttendancePage());
                         },
                         child: Container(
                           height: context.screenHeight * 0.1,
