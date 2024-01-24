@@ -4,7 +4,6 @@ import 'package:employee_management_system/core/core_widgets/widget_links.dart';
 import 'package:employee_management_system/modules/attendence/attendence_provider.dart';
 import 'package:employee_management_system/modules/attendence/widgets/date_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
