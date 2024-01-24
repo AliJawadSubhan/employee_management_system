@@ -20,7 +20,6 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -40,7 +39,8 @@ class LoginPage extends StatelessWidget {
                         height: context.screenHeight * 0.4,
                         width: context.screenWidth,
                         child: SvgPicture.asset(
-                            "assets/images/login_illustration.svg"),
+                          "assets/images/login_illustration.svg",
+                        ),
                       ),
                       Spaces.mid,
                       Padding(
