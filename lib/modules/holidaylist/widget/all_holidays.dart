@@ -9,45 +9,42 @@ class AllHolidays extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-        ListView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: holidaylist.length,
-          itemBuilder: (context, index) {
-            var item = holidaylist[index];
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFF7F7F7),
-                ),
-                child: Theme(
-                  data: ThemeData().copyWith(dividerColor: Colors.transparent),
-                  child: ExpansionTile(
-                    title: customTextWidget(
-                        text: "$index)  ${item.name}",
+    return ListView.builder(
+      itemCount: holidaylist.length,
+      itemBuilder: (context, index) {
+        var item = holidaylist[index];
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 12),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: const Color(0xFFF7F7F7),
+            ),
+            child: Theme(
+              data: ThemeData().copyWith(dividerColor: Colors.transparent),
+              child: ExpansionTile(
+                title: customTextWidget(
+                    text: "$index)  ${item.name}",
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: ColorConstants.primaryColor),
+                expandedAlignment: Alignment.topLeft,
+                children: [
+                  Spaces.smallh,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: customTextWidget(
+                        text: item.date.toString(),
                         fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: ColorConstants.primaryColor),
-                    expandedAlignment: Alignment.topLeft,
-                    children: [
-                      Spaces.smallh,
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: customTextWidget(
-                            text: item.date.toString(),
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400),
-                      ),
-                      Spaces.mid,
-                    ],
+                        fontWeight: FontWeight.w400),
                   ),
-                ),
+                  Spaces.mid,
+                ],
               ),
-            );
-          },
+            ),
+          ),
         );
+      },
+    );
   }
 }

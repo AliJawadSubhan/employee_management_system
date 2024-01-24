@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:employee_management_system/configs/constants/color_constants.dart';
 import 'package:employee_management_system/configs/extensions/buildcontext_extensions.dart';
 import 'package:employee_management_system/core/core_widgets/core_text.dart';
@@ -8,7 +7,6 @@ import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
 import 'package:employee_management_system/core/services/fingerprint_helper.dart';
 import 'package:employee_management_system/modules/dashboard/dashboard_page.dart';
-import 'package:employee_management_system/modules/holidaylist/holiday_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,6 +20,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

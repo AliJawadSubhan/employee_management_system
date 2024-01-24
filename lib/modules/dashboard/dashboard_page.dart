@@ -19,18 +19,24 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: ColorConstants.whiteColor,
         leading: const Icon(Icons.menu_sharp),
         actions: [
-          CircleAvatar(
-            radius: 24,
-            backgroundColor: Colors.grey[300],
+          GestureDetector(
+            onTap: () {
+              context.pushScreenTo(const EmployeeStatsPage());
+            },
             child: CircleAvatar(
-              radius: 22,
-              backgroundColor: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset(
-                  'assets/icons/woman.png',
+              radius: 24,
+              backgroundColor: Colors.grey[300],
+              child: CircleAvatar(
+                radius: 22,
+                backgroundColor: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset(
+                    'assets/icons/woman.png',
+                  ),
                 ),
               ),
             ),
