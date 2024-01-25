@@ -10,7 +10,7 @@ import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 import 'package:provider/provider.dart';
 
 class CreateLeave extends StatelessWidget {
-  CreateLeave({super.key});
+  const CreateLeave({super.key});
 
   @override
   Widget build(BuildContext context) {

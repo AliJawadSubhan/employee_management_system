@@ -5,7 +5,7 @@ import 'package:employee_management_system/core/core_widgets/core_text.dart';
 import 'package:employee_management_system/core/core_widgets/custom_elevated_button.dart';
 import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/spaces.dart';
-import 'package:employee_management_system/core/services/fingerprint_helper.dart';
+import 'package:employee_management_system/modules/authentication/clockin_clockout/clockin_out.dart';
 import 'package:employee_management_system/modules/dashboard/dashboard_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -107,11 +107,12 @@ class LoginPage extends StatelessWidget {
                     func: () async {
                       // console.log("")
                       // log("HEllo world");
-                      final canAuth = await FingerPrintClass.canAuthenticate();
-                      debugPrint(canAuth.toString());
-                      final authenticate =
-                          await FingerPrintClass.authenticate();
-                      debugPrint("Authenticated : $authenticate");
+                      context.pushScreenTo(ClockInOutPage());
+                      // final canAuth = await FingerPrintClass.canAuthenticate();
+                      // debugPrint(canAuth.toString());
+                      // final authenticate =
+                      //     await FingerPrintClass.authenticate();
+                      // debugPrint("Authenticated : $authenticate");
                     },
                   ),
                 ),
