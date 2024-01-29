@@ -57,17 +57,17 @@ class LeavesPage extends StatelessWidget {
                         ],
                       ),
                       Spaces.smallh,
-                      Flexible(
+                      const Flexible(
                         child: TabBarView(
                           children: <Widget>[
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.symmetric(
                                 horizontal: 6,
                               ),
                               child: YourLeaves(),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(
+                              padding: EdgeInsets.symmetric(
                                 horizontal: 6,
                               ),
                               child: CreateLeave(),

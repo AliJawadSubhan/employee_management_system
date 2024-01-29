@@ -27,11 +27,12 @@ Widget customTextField({
   return Container(
     height: height,
     decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(circularRadius),
-        border: Border.all(
-          color: colorBorder,
-        )),
+      color: color,
+      borderRadius: BorderRadius.circular(circularRadius),
+      border: Border.all(
+        color: colorBorder,
+      ),
+    ),
     padding: const EdgeInsets.only(
       left: 15,
     ),

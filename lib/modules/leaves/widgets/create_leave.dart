@@ -1,7 +1,5 @@
 import 'package:employee_management_system/configs/constants/color_constants.dart';
 import 'package:employee_management_system/configs/extensions/buildcontext_extensions.dart';
-import 'package:employee_management_system/core/core_widgets/core_text.dart';
-import 'package:employee_management_system/core/core_widgets/custom_field.dart';
 import 'package:employee_management_system/core/core_widgets/widget_links.dart';
 import 'package:employee_management_system/modules/leaves/leaves_provider.dart';
 import 'package:flutter/material.dart';
