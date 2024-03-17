@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:employee_management_system/modules/attendence/attendence_provider.dart';
+import 'package:employee_management_system/modules/authentication/login_user/login_user.dart';
 import 'package:employee_management_system/modules/leaves/leaves_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +30,7 @@ class EmployeeManagementSystem extends StatelessWidget {
           useMaterial3: true,
           indicatorColor: Colors.white,
         ),
-        home: const CheckLocation(),
+        home: LoginPage(),
       ),
     );
   }
